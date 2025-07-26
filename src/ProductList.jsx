@@ -253,7 +253,7 @@ function ProductList({ onHomeClick }) {
         setShowCart(false);
     };
     return (
-        <div>
+        <div><p>xxxxxx</p>
             <div className="navbar" style={styleObj}>
                 <div className="tag">
                     <div className="luxury">
