@@ -298,7 +298,7 @@ function ProductList({ onHomeClick }) {
                 <div style={styleObjUl}>
                     <div> <a href="#" onClick={(e) => handlePlantsClick(e)} style={styleA}>Plants</a></div>
 
-                    <div>                     {totalQuantity > 0 && (
+                    <div>{totalQuantity > 0 && (
                         <span style={{
                         backgroundColor: 'red',
                         color: 'white',
@@ -306,8 +306,8 @@ function ProductList({ onHomeClick }) {
                         padding: '2px 8px',
                         fontSize: '30px',
                         //position: 'absolute',
-                        top: '0',
-                        right: '5',
+                        top: '5',
+                        right: '10',
                         transform: 'translate(10%, -50%)'
                         }}>
                         {totalQuantity}
