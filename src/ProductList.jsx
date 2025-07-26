@@ -299,11 +299,11 @@ function ProductList({ onHomeClick }) {
                                     color: 'white',
                                     borderRadius: '50%',
                                     padding: '2px 8px',
-                                    fontSize: '14px',
-                                    position: 'absolute',
-                                    top: '0',
-                                    right: '0',
-                                    transform: 'translate(10%, -50%)'
+                                    fontSize: '30px',
+                                    //position: 'absolute',
+                                    //top: '0',
+                                    //right: '0',
+                                    //transform: 'translate(10%, -50%)'
                                     }}>
                                     {totalQuantity}
                                     </span>
