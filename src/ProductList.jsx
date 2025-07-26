@@ -302,7 +302,7 @@ function ProductList({ onHomeClick }) {
                         backgroundColor: 'red',
                         color: 'white',
                         borderRadius: '50%',
-                        padding: '2px 8px',
+                        padding: '20px 80px',
                         fontSize: '14px',
                         position: 'absolute',
                         top: '0',
