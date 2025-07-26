@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './ProductList.css'
 import CartItem from './CartItem';
-import {addItem} from './CartSlice'
+import {addItem} from './CartSlice';
+
+import { useDispatch } from 'react-redux'; // ✅ Add this
+import { addItem } from './CartSlice'; // ✅ Make sure this is the correct path and name
 function ProductList({ onHomeClick }) {
-    //const dispatch = useDispatch();
+    const dispatch = useDispatch();
     const [showCart, setShowCart] = useState(false);
     const [showPlants, setShowPlants] = useState(false); // State to control the visibility of the About Us page
     const [addedToCart, setAddedToCart] = useState({});
@@ -258,6 +261,7 @@ function ProductList({ onHomeClick }) {
     };
 
     const handleAddToCart = (product) => {
+        dispatch(addItem(product)); // ✅ This won't work unless dispatch is defined
         dispatch(addItem(product)); // Dispatch the action to add the product to the cart (Redux action)
       
         setAddedToCart((prevState) => ({ // Update the local state to reflect that the product has been added
