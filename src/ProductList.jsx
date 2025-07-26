@@ -322,15 +322,8 @@ function ProductList({ onHomeClick }) {
             onClick={() => handleAddToCart(plant)} // Handle adding plant to cart
           >
             Add to Cart
-          </button>
-        </div>
-      ))}
-    </div>
-  </div>
-))}
 
-
-<div>
+            <div>
   <a href="#" onClick={(e) => handleCartClick(e)} style={styleA}>
     <h1 className='cart'>
       <svg /* your existing cart SVG here */></svg>
@@ -354,6 +347,12 @@ function ProductList({ onHomeClick }) {
 </div>
 
 
+          </button>
+        </div>
+      ))}
+    </div>
+  </div>
+))}
                 </div>
             ) : (
                 <CartItem onContinueShopping={handleContinueShopping} />
