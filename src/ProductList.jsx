@@ -3,7 +3,7 @@ import './ProductList.css'
 import CartItem from './CartItem';
 import {addItem} from './CartSlice';
 
-import { useDispatch } from 'react-redux'; // ✅ Add this
+import { useDispatch } from 'react-redux'; 
 function ProductList({ onHomeClick }) {
     const dispatch = useDispatch();
     const [showCart, setShowCart] = useState(false);
@@ -262,12 +262,12 @@ function ProductList({ onHomeClick }) {
     };
 
     const handleAddToCart = (product) => {
-        //dispatch(addItem(product)); // ✅ This won't work unless dispatch is defined
-        dispatch(addItem(product)); // Dispatch the action to add the product to the cart (Redux action)
+        //dispatch(addItem(product)); 
+        dispatch(addItem(product)); 
       
-        setAddedToCart((prevState) => ({ // Update the local state to reflect that the product has been added
-          ...prevState, // Spread the previous state to retain existing entries
-          [product.name]: true, // Set the current product's name as a key with value 'true' to mark it as added
+        setAddedToCart((prevState) => ({ 
+          ...prevState, 
+          [product.name]: true, 
         }));
       };
 
