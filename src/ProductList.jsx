@@ -276,12 +276,12 @@ function ProductList({ onHomeClick }) {
                 <div className="product-grid">
 
 <div className="product-grid">
-    {plantsArray.map((categoryObj, index) => (
-        <div key={index}>
+    {plantsArray.map((categoryObj, categoryIndex) => (
+        <div key={categoryIndex}>
             <h2>{categoryObj.category}</h2>
-            <div className="plant-category">
-                {categoryObj.plants.map((plant, idx) => (
-                    <div className="plant-card" key={idx}>
+            <div className="plant-category-grid">
+                {categoryObj.plants.map((plant, plantIndex) => (
+                    <div key={plantIndex} className="plant-card">
                         <img src={plant.image} alt={plant.name} className="plant-image" />
                         <h3>{plant.name}</h3>
                         <p>{plant.description}</p>
@@ -292,6 +292,7 @@ function ProductList({ onHomeClick }) {
         </div>
     ))}
 </div>
+
 
 
                 </div>
