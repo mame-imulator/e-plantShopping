@@ -14,7 +14,7 @@ const CartItem = ({ onContinueShopping }) => {
       const cost = parseFloat(item.cost.substring(1)); // Remove '$' and convert to number
       total += cost * item.quantity;
     });
-    return total.toFixed(2);
+    return total.toFixed(1);
   };
 
   const handleContinueShopping = (e) => {
