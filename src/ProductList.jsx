@@ -4,7 +4,6 @@ import CartItem from './CartItem';
 import {addItem} from './CartSlice';
 
 import { useDispatch } from 'react-redux'; // ✅ Add this
-import { addItem } from './CartSlice'; // ✅ Make sure this is the correct path and name
 function ProductList({ onHomeClick }) {
     const dispatch = useDispatch();
     const [showCart, setShowCart] = useState(false);
