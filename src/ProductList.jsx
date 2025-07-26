@@ -260,7 +260,7 @@ function ProductList({ onHomeClick }) {
     };
 
     const handleAddToCart = (product) => {
-        dispatch(addItem(product)); // ✅ This won't work unless dispatch is defined
+        //dispatch(addItem(product)); // ✅ This won't work unless dispatch is defined
         dispatch(addItem(product)); // Dispatch the action to add the product to the cart (Redux action)
       
         setAddedToCart((prevState) => ({ // Update the local state to reflect that the product has been added
