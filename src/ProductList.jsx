@@ -9,10 +9,12 @@ function ProductList({ onHomeClick }) {
     const [showCart, setShowCart] = useState(false);
     const [showPlants, setShowPlants] = useState(false);
     const [addedToCart, setAddedToCart] = useState({});
+    const cartItems = useSelector((state) => state.cart.items);
+    const totalQuantity = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+    
 
-
-    const cartItems = useSelector(state => state.cart.items);
-    const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+    //const cartItems = useSelector(state => state.cart.items);
+    //const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
 
     const plantsArray = [
@@ -326,6 +328,31 @@ function ProductList({ onHomeClick }) {
     </div>
   </div>
 ))}
+
+
+<div>
+  <a href="#" onClick={(e) => handleCartClick(e)} style={styleA}>
+    <h1 className='cart'>
+      <svg /* your existing cart SVG here */></svg>
+      {totalQuantity > 0 && (
+        <span style={{
+          backgroundColor: 'red',
+          color: 'white',
+          borderRadius: '50%',
+          padding: '2px 8px',
+          fontSize: '14px',
+          position: 'absolute',
+          top: '0',
+          right: '0',
+          transform: 'translate(10%, -50%)'
+        }}>
+          {totalQuantity}
+        </span>
+      )}
+    </h1>
+  </a>
+</div>
+
 
                 </div>
             ) : (
