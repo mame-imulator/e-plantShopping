@@ -306,8 +306,8 @@ function ProductList({ onHomeClick }) {
                         padding: '2px 8px',
                         fontSize: '30px',
                         //position: 'absolute',
-                        top: '5',
-                        right: '10',
+                        top: '0',
+                        right: '0',
                         transform: 'translate(10%, -50%)'
                         }}>
                         {totalQuantity}
