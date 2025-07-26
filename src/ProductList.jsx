@@ -11,11 +11,6 @@ function ProductList({ onHomeClick }) {
     const [addedToCart, setAddedToCart] = useState({});
     const cartItems = useSelector((state) => state.cart.items);
     const totalQuantity = cartItems.reduce((sum, item) => sum + item.quantity, 0);
-    
-
-    //const cartItems = useSelector(state => state.cart.items);
-    //const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
-
 
     const plantsArray = [
         {
@@ -267,13 +262,13 @@ function ProductList({ onHomeClick }) {
         setShowCart(false);
     };
 
-    const handleAddToCart = (product) => {
-        //dispatch(addItem(product)); 
+    const handleAddToCart = (product) => { 
         dispatch(addItem(product)); 
       
         setAddedToCart((prevState) => ({ 
           ...prevState, 
           [product.name]: true, 
+          [product.button]: false, 
         }));
       };
 
