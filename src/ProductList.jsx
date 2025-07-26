@@ -279,6 +279,8 @@ function ProductList({ onHomeClick }) {
 
     return (
         <div>
+
+
             <div className="navbar" style={styleObj}>
                 <div className="tag">
                     <div className="luxury">
@@ -288,6 +290,26 @@ function ProductList({ onHomeClick }) {
                                 <h3 style={{ color: 'white' }}>Paradise Nursery</h3>
                                 <i style={{ color: 'white' }}>Where Green Meets Serenity</i>
                             </div>
+                            <a href="#" onClick={(e) => handleCartClick(e)} style={styleA}>
+                                <h1 className='cart'>
+                                <svg /* your existing cart SVG here */></svg>
+                                {totalQuantity > 0 && (
+                                    <span style={{
+                                    backgroundColor: 'red',
+                                    color: 'white',
+                                    borderRadius: '50%',
+                                    padding: '2px 8px',
+                                    fontSize: '14px',
+                                    position: 'absolute',
+                                    top: '0',
+                                    right: '0',
+                                    transform: 'translate(10%, -50%)'
+                                    }}>
+                                    {totalQuantity}
+                                    </span>
+                                )}
+                                </h1>
+                            </a>
                         </a>
                     </div>
 
@@ -322,31 +344,6 @@ function ProductList({ onHomeClick }) {
             onClick={() => handleAddToCart(plant)} // Handle adding plant to cart
           >
             Add to Cart
-
-            <div>
-  <a href="#" onClick={(e) => handleCartClick(e)} style={styleA}>
-    <h1 className='cart'>
-      <svg /* your existing cart SVG here */></svg>
-      {totalQuantity > 0 && (
-        <span style={{
-          backgroundColor: 'red',
-          color: 'white',
-          borderRadius: '50%',
-          padding: '2px 8px',
-          fontSize: '14px',
-          position: 'absolute',
-          top: '0',
-          right: '0',
-          transform: 'translate(10%, -50%)'
-        }}>
-          {totalQuantity}
-        </span>
-      )}
-    </h1>
-  </a>
-</div>
-
-
           </button>
         </div>
       ))}
